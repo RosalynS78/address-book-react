@@ -1,13 +1,57 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  background-image: url('./images/bgphoto.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Architects Daughter', cursive;
+  color: whitesmoke;
+  text-shadow: 2px 2px black;
+  font-size: 130px;
+}
+
+.displayResults {
+  display: flex;
+
+  background-color: black;
+  opacity: 90%;
+  padding: 50px;
+  color: white;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 25px;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.usersDetails {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  padding: 30px;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
