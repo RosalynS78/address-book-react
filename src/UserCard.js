@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { FaHeart } from "react-icons/fa";
 
+// functional Componet
 const UserCard = (props) => {
-  const [contactInfo, hideContact] = useState(false);
 
-  const handleClick = () => {
-    !contactInfo ? hideContact(true) : hideContact(false);
-  };
+// useState hook
+const [isHidden, setHide] = useState (false)
+
+const handleClick = () => {
+  let contactInfo = isHidden === true ? false : true
+  setHide(contactInfo);
+}
 
   return (
     <React.Fragment>
@@ -25,15 +28,13 @@ const UserCard = (props) => {
         </div>
         <div className="button">
           <button onClick={handleClick}>
-            {contactInfo ? (
-              <div>
-                <FaHeart />{" "}
-              </div>
+            {isHidden ? (
+              <div></div>
             ) : (
               <div>Let's Chat</div>
             )}
           </button>
-          {contactInfo ? (
+          {isHidden ? (
             <div>
               <div>Phone: {props.phone}</div>
               <div>Cell: {props.cell}</div>
